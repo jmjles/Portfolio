@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./CSS/sm-style.css"/>
   </head>
   <body>
+    <img id="backg"src="./IMG/background.jpg" />
     <section id="navigation">
       <div id="Intro">
         <h1>Jesus Morales Jr.</h1>
@@ -30,11 +31,16 @@
         </ul>
       </nav>
     </section>
+    <div id="pause">
+      <img src="./IMG/play.png"/>
+    </div>
     <article>
       <h1>Working for a Better Tomorrow</h1>
       <p>I have always dreamt of being a Developer.<br/>Creating things that came up in my mind was always a thrill to me and will always will be!<br/> Thank you for your time.</p>
       <br/>
-      <button id="examples" data-property="animation-play-state">Examples</button>
+      <div>
+        <a id="examples" href="./HTML/examples.html">Examples</a>
+      </div>
     </article>
     <section section="bottom">
       <footer>
@@ -61,9 +67,11 @@
           </a>
         </ul>
         <div id="msg">
-          <p>Building What Once Was an Idea.</p>
+          <p>Building What Once Was An Idea.</p>
         </div>
       </footer>
     </section>
   </body>
+  <script src="./JS/jquery.js"></script>
+  <script src="./JS/index.js"></script>
 </html>

@@ -1,12 +1,18 @@
 html {
-  background-image: url("../IMG/background.jpg");
   color: #aeb0b2;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
-html:before {
-  background: url("../IMG/background.jpg");
-  animation: rotate 2s infinite linear;
+#backg{
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  height: 400%;
+  width: 400%;
+  z-index: -1;
+  overflow: hidden;
+  animation: rotate 500s infinite;
 }
 @keyframes rotate {
   from {
@@ -14,7 +20,7 @@ html:before {
   }
 
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
 ul {
@@ -38,9 +44,12 @@ nav ul li {
   padding-left: 10px;
   padding-right: 10px;
   border: solid 1px #aeb0b2;
+  border-radius: 5px;
 }
 #Intro{
   text-align: right;
+  padding-right: 1%;
+  padding-bottom: .3%;
 }
 
 #navigation {
@@ -53,6 +62,7 @@ nav ul li {
   left: 0;
   right: 0;
   display: inline;
+  border-bottom: #4d5760 solid 2px;
 }
 nav {
   position: absolute;
@@ -70,7 +80,22 @@ article {
   left: 0;
   width: 100%;
   color: white;
+  padding: 30px;
   background-color: rgba(0, 0, 0, 0.39);
+}
+#examples{
+  border-radius: 10px;
+  border: #aeb0b2 solid 2px;
+  padding: 10px;
+  transition: 1s;
+}
+#examples:link, #examples:visited {
+  text-decoration: none;
+  color: #aeb0b2;
+}
+#examples:hover, #examples:active {
+  color: white;
+  border-color: white;
 }
 footer {
   text-align: center;
@@ -80,6 +105,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  border-top: #4d5760 solid 2px;
 }
 #social {
   text-align: left;
@@ -96,4 +122,19 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+#pause {
+  position: sticky;
+  margin-top: 130px;
+  text-align: right;
+  z-index: 99;
+  width: 35px;
+  padding: 5px;
+  border: rgba(255, 255, 255, 0.3) solid 2px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#pause img {
+  height: 35px;
+  width: 35px;
 }
