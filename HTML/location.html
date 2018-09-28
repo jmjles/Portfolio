@@ -1,9 +1,115 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-
+    <title>Jesus Morales' Site</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/sm-style.css"/>
+    <script src="../JS/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-
+    <video autoplay loop muted id="vid">
+      <source src="../OTHER/stars.mp4" type="video/mp4"/>
+    </video>
+    <section id="navigation">
+      <div id="Intro">
+        <h1>Jesus Morales Jr.</h1>
+        <h3>Full-Stack Web Dev.</h3>
+      </div>
+      <nav>
+        <ul>
+          <a href="../index.html">
+            <li>
+              Home
+            </li>
+          </a>
+          <a href="../HTML/about.html">
+            <li>
+              About Me
+            </li>
+          </a>
+          <a href="../HTML/examples.html">
+            <li>
+              Examples
+            </li>
+          </a>
+          <a href="./HTML/contact.html">
+              <li>
+                Contact Me
+              </li>
+          </a>
+        </ul>
+      </nav>
+    </section>
+    <div id="pause">
+      <img src="../IMG/play.png"/>
+    </div>
+    <article>
+      <h1>
+        Place's Information
+      </h1>
+      <div>
+        <span>
+          The Place:
+        </span>
+        <input type="text" placeholder="Enter A Place" id="PSearch" size="30px;"/>
+        <span id="Search">
+          Search
+        </span>
+        <br/>
+        <h1 id="place"></h1>
+        <br/>
+        <div id="ltime">
+          Local Time:<span id ="localtime"></span>
+        </div>
+      </div>
+      <div id="main">
+        <div id="theeinfoarea"></div>
+        <div id="map"></div>
+        <div id="weather"></div>
+      </div>
+    </article>
+    <section section="bottom">
+      <footer>
+        <footer>
+          <ul id="social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100000801177256" target="_blank">
+                <img src="../IMG/facebook-ico.png" alt="Facebook"/>
+              </a>
+            </li>
+            <a href="https://www.linkedin.com/in/jesus-morales/" target="_blank">
+              <li>
+                <img src="../IMG/linkedin-ico.png"/>
+              </li>
+            </a>
+            <a href="https://github.com/jmjles" target="_blank">
+              <li>
+                <img src="../IMG/github-ico.png"/>
+              </li>
+            </a>
+            <a href="https://confirm.udacity.com/QTXW5D2Q" target="_blank">
+              <li>
+                <img src="../IMG/udacity-ico.png"/>
+              </li>
+            </a>
+            <a href="tel:8058259190">
+              <li>
+                <img id="bgic" src="../IMG/phone.png"/>
+              </li>
+            </a>
+            <a href="mail:jmjles@gmail.com">
+              <li>
+                <img id="contact" src="../IMG/email.png"/>
+              </li>
+            </a>
+          </ul>
+          <div id="msg">
+            <p>Building What Once Was An Idea.</p>
+          </div>
+        </footer>
+      </footer>
+    </section>
+    <script src="../JS/location.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ9oeLWm5OKCadIOoqDljfgSgeXJYibIA&callback=initMap&libraries=places" async defer></script>
   </body>
 </html>
