@@ -163,32 +163,21 @@ footer {
 }
 #social {
   text-align: left;
+  width: 100%;
+  padding-top: 5px;
 }
 #social img {
   width: 50px;
   height: 50px;
+  padding-left: 2px;
+  padding-right:2px;
 }
-#social li {
-  display: inline-block;
-}
-#social li a {
-  display: block;
-  height: 50px;
+#bgic{
+  padding-left: 15px;
 }
 #msg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-#bigic {
-  margin-left: 5px;
-  padding-left: 5px;
-  border-left: dotted white 4px;
-}
-#contact img{
-  height: 50px;
-  width: 50px;
+  float: right;
+  margin-right: 40%;
 }
 #pause img {
   height: 35px;
