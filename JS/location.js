@@ -72,7 +72,6 @@ function geocode() {
     '<tr>'+'<td>'+"Wind Speed:"+'</td>'+'<td>'+parseInt(winfo.wind.speed)+'m/s'+'</td>'+'</tr>'+
 
     '</table>');
-    console.log(winfo);
   })
   .catch(function(error) {
     console.log(error);
@@ -121,10 +120,14 @@ $(document).ready(function() {
     .done(function(result){
       $("#theeinfoarea").html('<h1>Local News</h1>');
       var articles = result.response.docs;
-      for (var i = 0; i < articles.length && i < 5; i++) {
-        var article = articles[i];
-        $("#theeinfoarea").append('<h2>'+'<a target="_blank" href="'+article.web_url+'">'+ article.headline.main +'</a>'+'</h2>'+'<p>' + article.snippet + '</p>');
-        console.log(article.headline.main);
+      if (articles.length == 0) {
+        $("#theeinfoarea").append('<h2>'+'No News Found'+'</h2>');
+      }
+      else {
+        for (var i = 0; i < articles.length && i < 5; i++) {
+          var article = articles[i];
+          $("#theeinfoarea").append('<h2>'+'<a target="_blank" href="'+article.web_url+'">'+ article.headline.main +'</a>'+'</h2>'+'<p>' + article.snippet + '</p>');
+        }
       }
     })
     .fail(function(err) {
