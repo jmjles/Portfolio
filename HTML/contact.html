@@ -45,7 +45,62 @@
       <img src="../IMG/play.png"/>
     </div>
     <article>
-      Work In Progress...
+      <form method="post" action="../PHP/contact.php">
+        <table>
+          <tr>
+            <td>
+              * Name:
+            </td>
+            <td>
+              <input name="Name" type="text" required placeholder="Your Name"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              * Email:
+            </td>
+            <td>
+              <input name="Email" type="email" required placeholder="Your Email"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Telephone:
+            </td>
+            <td>
+              <input name="Telephone" placeholder="Your Telephone"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              * About:
+            </td>
+            <td>
+              <input name="About"  required placeholder="Your Name"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              * Message:
+            </td>
+            <td>
+              <textarea name="Message" placeholder="Enter your message here." required maxlength="300"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <input type="submit" value="Submit" name="submit"/>
+            </td>
+          </tr>
+          <tr>
+            <td id="r">
+              * = Required Fields
+            </td>
+          </tr>
+        </table>
+      </form>
     </article>
     <section id="bottom">
       <footer>
@@ -74,5 +129,5 @@
     </section>
   </body>
   <script src="../JS/jquery.js"></script>
-  <script src="../JS/examples.js"></script>
+  <script src="../JS/contact.js"></script>
 </html>
