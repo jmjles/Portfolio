@@ -10,6 +10,6 @@
     $header = "From: ".$about;
     $txt = "Name: ".$name."./n".$email."./n".$telephone."./n/n".$message;
     mail($mailTo, $header, $txt);
-    header("Location: jesusmj.com?mailsend")
+    header("Location: ../index?mailsend")
   }
 ?>
