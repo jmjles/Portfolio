@@ -9,6 +9,8 @@ if (isset($_POST['Submit'])) {
   $mailTo = "jmjles@gmail.com";
   $header = "From: ".$about;
   $txt = "Name: ".$name."./n".$email."./n".$telephone."./n/n".$message;
+
   mail($mailTo, $header, $txt);
-  header("Location: ../index?mailsend")
+  header("Location: ../index?mailsend");
 }
+?>
