@@ -9,7 +9,7 @@
     $mailTo = "jmjles@gmail.com";
     $header = "From: ".$about;
     $txt = "Name: ".$name."./n".$email."./n".$telephone."./n/n".$message;
-    mail($mailTo, $about, $txt, $header);
+    mail($mailTo, $header, $txt);
     header("Location: jesusmj.com?mailsend")
   }
 ?>
