@@ -1,6 +1,6 @@
 Portfolio Website
 =================
-Check out my site live [here](www.jesusmj.com)
+Check out my site live [here](http://www.jesusmj.com)
 
 Purpose
 -------
