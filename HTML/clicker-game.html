@@ -40,7 +40,28 @@
       <img src="../IMG/play.png"/>
     </div>
     <article>
-
+      <h1>Clicker Game</h1>
+      <table class="gameinfo">
+        <thead>
+          <tr>
+            <td>
+              Characters:
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-bind="foreach: characters">
+            <td>
+              <p data-bind="text: name" data-bind="click: codename" id="examples"></p>
+            </td>
+          </tr>
+          <tr data-bind="foreach: characters">
+            <td>
+              <img class="charpic" data-bind="attr: { src: url }"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </article>
     <section id="bottom">
       <footer>
@@ -71,4 +92,5 @@
   <script type="text/javascript" src="../JS/jquery.js"></script>
   <script type="text/javascript" src="../JS/knockout.js"></script>
   <script type="text/javascript" src="../JS/clicker-game.js"></script>
+  <script type="text/javascript" src="../JS/ko.js"></script>
 </html>

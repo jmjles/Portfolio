@@ -92,6 +92,16 @@ article {
 article p{
   text-align: center;
 }
+
+.gameinfo tr td{
+  width: 30%;
+}
+.charpic {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(122, 122, 122, 0.54);
+}
+
 #Search {
   width: 10%;
   margin-left: 5px;
