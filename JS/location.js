@@ -1,4 +1,4 @@
-//Google Maps
+//Global Variables
 var map;
 var arealat;
 var arealing;
@@ -7,6 +7,8 @@ var tkey;
 var thetime;
 var wkey;
 var wurl;
+
+//Google Maps
 function initMap() {
   var options = {
     center: new google.maps.LatLng(48,95),
@@ -55,6 +57,7 @@ function geocode() {
   .catch(function(error){
     console.log(error);
   })
+  //Get Weather
   axios.get(wurl,{
     params:{
       q: area,
@@ -67,16 +70,14 @@ function geocode() {
     var winfo = response.data;
     warea.html('<h2>'+winfo.name+' Weather'+'</h2>'+'<h3>'+winfo.weather[0].main+'</h3>'+
     '<table id="temp">'+'<tr>'+'<td>'+"Current Temp:"+'</td>'+'<td>'+parseInt(winfo.main.temp)+'&#8457'+'</td>'+'</tr>'+
-    '<tr>'+'<td>'+"Max Temp:"+'</td>'+'<td>'+parseInt(winfo.main.temp_max)+'&#8457'+'</td>'+'</tr>'+
-    '<tr>'+'<td>'+"Min Temp:"+'</td>'+'<td>'+parseInt(winfo.main.temp_min)+'&#8457'+'</td>'+'</tr>'+
     '<tr>'+'<td>'+"Wind Speed:"+'</td>'+'<td>'+parseInt(winfo.wind.speed)+'m/s'+'</td>'+'</tr>'+
-
     '</table>');
   })
   .catch(function(error) {
     console.log(error);
   })
 }
+
 $(document).ready(function() {
   //Pause/Play funtion of Background
   $( "#pause" ).click(function() {
