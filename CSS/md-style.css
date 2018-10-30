@@ -62,15 +62,6 @@ nav {
 li {
   display: inline;
 }
-#pause {
-  margin-top: 130px;
-  z-index: 99;
-  width: 35px;
-  padding: 5px;
-  border: rgba(255, 255, 255, 0.3) solid 2px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-}
 article {
   text-align: center;
   vertical-align: middle;

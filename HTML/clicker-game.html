@@ -36,9 +36,6 @@
         </ul>
       </nav>
     </section>
-    <div id="pause">
-      <img src="../IMG/play.png"/>
-    </div>
     <article>
       <h1>Clicker Game</h1>
       <table class="gameinfo">
@@ -52,12 +49,17 @@
         <tbody>
           <tr data-bind="foreach: characters">
             <td>
-              <p data-bind="text: name" data-bind="click: codename" id="examples"></p>
+              <p data-bind="text: name, click: CharacterViewModel.code" id="examples"></p>
             </td>
           </tr>
           <tr data-bind="foreach: characters">
             <td>
               <img class="charpic" data-bind="attr: { src: url }"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button data-bind="click: ghoul">Click Me</button>
             </td>
           </tr>
         </tbody>
