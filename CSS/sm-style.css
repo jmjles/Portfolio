@@ -67,12 +67,12 @@ li {
   display: inline;
 }
 article {
+  padding-top: 100px;
   text-align: center;
   vertical-align: middle;
   width: 100%;
   height: 100%;
   color: white;
-  margin-top: 5px;
   background-color: rgba(0, 0, 0, 0.75);
   font-size: 20px;
   margin-bottom: 130px;

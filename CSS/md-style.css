@@ -63,6 +63,7 @@ li {
   display: inline;
 }
 article {
+  padding-top: 100px;
   text-align: center;
   vertical-align: middle;
   width: 50%;
