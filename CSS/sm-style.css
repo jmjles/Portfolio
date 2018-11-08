@@ -84,6 +84,9 @@ article p{
 .gameinfo tr td{
   width: 30%;
 }
+.gameinfo{
+  width: 100%;
+}
 .charpic {
   width: 100%;
   height: 200px;

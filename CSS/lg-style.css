@@ -77,6 +77,22 @@ article {
 article p{
   text-align: left;
 }
+#currentChar{
+  width: 100%;
+  height: 500px;
+  margin-left: auto;
+}
+.gameinfo tr td{
+  width: 30%;
+}
+.gameinfo{
+  width: 100%;
+  margin-left: 0px;
+}
+.charpic {
+  width: 100%;
+  height: 200px;
+}
 #Search {
   width: 10%;
   margin-left: 5px;
