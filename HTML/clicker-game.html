@@ -38,6 +38,17 @@
     </section>
     <article>
       <h1>Clicker Game</h1>
+      <div data-bind="with: currentChar()">
+        <table>
+          <thead><h2 data-bind="text: name"></h2></thead>
+          <tr>
+            <td><p data-bind="text: counter"></p></td>
+            <td><p data-bind="text: title"></p></td>
+          </tr>
+        </table>
+
+        <img id="currentChar" data-bind="attr: {src: url}, click: $parent.Counter"/></div>
+      </div>
       <table class="gameinfo">
         <thead>
           <tr>
@@ -47,22 +58,54 @@
           </tr>
         </thead>
         <tbody>
-          <tr data-bind="foreach: characters">
+          <tr data-bind="foreach: charList">
             <td>
-              <p data-bind="text: name, click: CharacterViewModel.code" id="examples"></p>
+              <p data-bind="text: name, click: $parent.setChar" id="examples"></p>
             </td>
           </tr>
-          <tr data-bind="foreach: characters">
+          <tr data-bind="foreach: charList">
             <td>
-              <img class="charpic" data-bind="attr: { src: url }"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button data-bind="click: ghoul">Click Me</button>
+              <img class="charpic" data-bind="attr: { src: url }, click: $parent.setChar"/>
             </td>
           </tr>
         </tbody>
+      </table>
+      <table>
+        <thead>
+            <h2>Levels</h2>
+        </thead>
+        <tr>
+          <td>
+              Noob: 5
+          </td>
+          <td>
+              Beginner: 10
+          </td>
+        </tr>
+        <tr>
+          <td>
+              Amatuer: 15
+          </td>
+          <td>
+              Adventurer: 20
+          </td>
+        </tr>
+        <tr>
+          <td>
+              Thumping Rabbit: 25
+          </td>
+          <td>
+            Pro: 30
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Tapping Ninja: 35
+          </td>
+          <td>
+              GodLike: 40
+          </td>
+        </tr>
       </table>
     </article>
     <section id="bottom">
@@ -78,7 +121,7 @@
           <a href="https://confirm.udacity.com/QTXW5D2Q" target="_blank">
             <img src="../IMG/udacity-ico.png" alt="Udacity">
           </a>
-          <a id="bgic" href="tel:8058259190">
+          <a id="bgic" href="tel:+817018262731">
             <img src="../IMG/phone.png" alt="Phone">
           </a>
           <a href="mail:jmjles@gmail.com">
@@ -90,6 +133,5 @@
   </body>
   <script type="text/javascript" src="../JS/jquery.js"></script>
   <script type="text/javascript" src="../JS/knockout.js"></script>
-  <script type="text/javascript" src="../JS/clicker-game.js"></script>
   <script type="text/javascript" src="../JS/ko.js"></script>
 </html>

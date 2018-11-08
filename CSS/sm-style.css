@@ -87,9 +87,12 @@ article p{
 .charpic {
   width: 100%;
   height: 200px;
-  background-color: rgba(122, 122, 122, 0.54);
 }
-
+#currentChar{
+  width: 100%;
+  height: 500px;
+  margin-left: auto;
+}
 #Search {
   width: 10%;
   margin-left: 5px;
@@ -164,12 +167,12 @@ article p{
 footer {
   text-align: center;
   width: 100%;
-  background-color: #343b41;
+  background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  border-top: #4d5760 solid 2px;
+  border-top: black solid 1px;
 }
 #social {
   text-align: center;

@@ -150,12 +150,12 @@ table {
 footer {
   text-align: center;
   width: 100%;
-  background-color: #343b41;
+  background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  border-top: #4d5760 solid 2px;
+  border-top: black solid 1px;
 }
 #social {
   text-align: left;

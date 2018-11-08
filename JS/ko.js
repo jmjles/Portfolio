@@ -1,41 +1,86 @@
+document
 var vm = new CharacterViewModel;
+var char;
+var titles;
+//Titles/Levels 
+titles = [
+  "Noob",
+  "Beginner",
+  "Amatuer",
+  "Adventurer",
+  "Thumping Rabit",
+  "Pro",
+  "Tapping Ninja",
+  "GodLike"
+];
 
-function Character(name, title, count, url, codename){
-  this.name = name;
-  this.title = ko.observable(title);
-  this.counter = count;
-  this.url = url;
-  this.code = codename;
+//Model
+function Character(data) {
+  this.name = ko.observable(data.name);
+  this.counter = ko.observable(data.counter);
+  this.url = ko.observable(data.url);
+  this.levels = ko.observableArray(data.title);
+  this.title = ko.computed(function() {
+    var title;
+    var clicks = this.counter();
+    if (clicks < 5) {
+      title = "Noob";
+    }else if(clicks < 10) {
+      title = "Beginner" 
+    }else if(clicks < 15) {
+      title = "Amatuer" 
+    }else if(clicks < 20) {
+      title = "Adventurer" 
+    }else if(clicks < 25) {
+      title = "Thumping Rabit" 
+    }else if(clicks < 30) {
+      title = "Pro" 
+    }else if(clicks < 35) {
+      title = "Tapping Ninja" 
+    }else{
+      title = "GodLike" 
+    }
+    return title;
+  },this);
 }
+
+//ViewModel
 function CharacterViewModel() {
+  var self = this;
 
-    this.titled = [
-        { title: "Noob" },
-        { title: "Beginner" },
-        { title: "Amatuer" },
-        { title: "Adventurer" },
-        { title: "Thumping Rabit" },
-        { title: "Pro" },
-        { title: "Tapping Ninja" },
-        { title: "GodLike" }
-    ];
+  char = [
+    {
+    name: 'Ghost',
+    counter: 0,
+    url: '../IMG/ghost.png',
+    levels: titles
+    },
+    {
+    name: 'Ghoul',
+    counter: 0,
+    url: '../IMG/ghoul.png',
+    levels: titles
+    },
+    {
+    name: 'Pumpkin',
+    counter: 0,
+    url: '../IMG/pumpkin.png',
+    levels: titles
+    }
+  ];
 
-    // Editable data
-    this.characters = ko.observableArray([
-        pumpkin = new Character("Pumpkin", this.titled[0],0, "../IMG/pumpkin.png", "pumpkin" ),
-        ghoul = new Character("Ghoul", this.titled[2],0, "../IMG/ghoul.png", "ghoul" ),
-        ghost = new Character("Ghost", this.titled[2],0, "../IMG/ghost.png", "ghost" )
-    ]);
-    this.test = "Tested";
+  this.charList = ko.observableArray([]);
+  char.forEach(function(chars) {
+    self.charList.push( new Character(chars) );
+  });
 
-    this.pumpkin = function() {
-      console.log("Test 1");
-    }
-    this.ghoul = function() {
-      console.log("Test 2");
-    }
-    this.ghost = function() {
-      console.log("Test 3");
-    }
+  this.currentChar = ko.observable( this.charList()[0]);
+  this.setChar = function(clickedchar) {
+    self.currentChar(clickedchar);
+  };
+
+  this.Counter = function() {
+    this.counter(this.counter() + 1);
+  };
 }
 ko.applyBindings(vm);
