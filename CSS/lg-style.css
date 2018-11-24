@@ -107,21 +107,20 @@ article p{
 #ltime {
   width: 300px;
 }
-#main{
+#mw {
   display: flex;
 }
 #theeinfoarea{
-  width: 20%;
-  position: relative;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 #map {
-  width: 60%;
+  width: 80%;
   height: 500px;
-  position: relative;
 }
 #weather{
   width: 20%;
-  position: relative;
 }
 table {
   text-align: left;
