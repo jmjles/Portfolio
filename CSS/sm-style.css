@@ -80,7 +80,11 @@ article {
 article p{
   text-align: center;
 }
-
+#portrait{
+  border-radius: 50px;
+  height: 200px;
+  width: 150px;
+}
 .gameinfo tr td{
   width: 30%;
 }

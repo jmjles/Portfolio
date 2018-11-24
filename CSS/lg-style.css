@@ -77,6 +77,13 @@ article {
 article p{
   text-align: left;
 }
+#portrait{
+  border-radius: 50px;
+  height: 300px;
+  width: 200px;
+  float: left;
+  padding: 10px;
+}
 #currentChar{
   width: 100%;
   height: 500px;
