@@ -92,6 +92,9 @@ article p{
 .gameinfo tr td{
   width: 30%;
 }
+.gameinfo tbody tr td p{
+  text-align: center;
+}
 .gameinfo{
   width: 100%;
   margin-left: 0px;
@@ -122,10 +125,22 @@ article p{
 #weather{
   width: 20%;
 }
+#gamer {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#lvls {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
 table {
   text-align: left;
   margin-left: 25%;
-  width: 75%
+  width: 75%;
 }
 #ex {
   width: 100%;
